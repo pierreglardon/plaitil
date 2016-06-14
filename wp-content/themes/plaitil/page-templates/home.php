@@ -91,9 +91,14 @@ get_header(); ?>
         <div class="columns small-12">
             <h2>Contact</h2>
             <h3>Ne soyez pas timide</h3>
+            <p class="text-center">
+                Nous pouvons vous aider à concrétiser votre projet. Nous vous accompagnerons et développerons votre projet de façon à le rendre unique !
+            </p>
         </div>
-        <div class="columns small-12">
-            <?php the_field('contact_form') ?>
+        <div class="columns large-8 large-centered">
+            <?php while ( have_posts() ) : the_post(); ?>
+                <?php the_field('contact_form') ?>
+            <?php endwhile;?>
         </div>
     </div>
 </section>

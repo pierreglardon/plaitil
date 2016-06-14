@@ -304,5 +304,46 @@ section.container {
     }
     #contact {
         margin-top:150px;
+        h2 {
+            margin-right:10%;
+        }
+        h3 {
+            margin-left:10%;
+        }
+        p {
+            margin-bottom:80px;
+        }
+        .large-centered {
+            float:none !important;
+            input, textarea {
+                line-height:25px;
+                border:2px solid #fafafa;
+                background:transparent;
+                color:#fafafa;
+                box-shadow:none;
+                padding-left:40px;
+                padding-right:40px;
+                &[type="submit"] {
+                    display:block;
+                    background:transparent;
+                    border-color: $p-red;
+                    width:100%;
+                    color:$p-red;
+                    text-transform: uppercase;
+                    font-size:16px;
+                    transition:all ease 0.3s;
+                    &:hover, &:active, &:focus {
+                        background:#fafafa;
+                    }
+                }
+                &:hover, &:active, &:focus {
+                    border-color: $p-red;
+                }
+            }
+            [class*=not-valid-tip] {
+                transform: translateY(-1rem);
+                display:inline-block;
+            }
+        }
     }
 }

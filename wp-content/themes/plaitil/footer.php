@@ -12,8 +12,8 @@
 
 	</section>
 
-	<footer>
-		Footer such wow
+	<footer id="footer">
+
 	</footer>
 <script src="<?php echo get_stylesheet_directory_uri() ?>/assets/components/owl.carousel/dist/owl.carousel.min.js" type="text/javascript"></script>
 <?php wp_footer(); ?>
