@@ -80,7 +80,7 @@ body {
         z-index: 20;
         @include breakpoint(large down) {
             height:initial;
-            margin:25px 25px 0 0;
+            padding:25px 25px 0 0;
             position: static;
             float:right;
             width:inherit;

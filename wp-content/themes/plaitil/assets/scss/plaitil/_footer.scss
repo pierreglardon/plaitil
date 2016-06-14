@@ -5,6 +5,9 @@
     padding:60px 0;
     overflow:hidden;
     position:relative;
+    @include breakpoint(large down) {
+        margin-right:0;
+    }
     &::before {
         height:100%;
         width:100%;
@@ -13,7 +16,7 @@
         right:-50%;
         top:0;
         background-image: url(../plaitil/logo-black.svg);
-        opacity: 0.05;
+        opacity: 0.1;
         z-index: 0;
     }
     > * {

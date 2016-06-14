@@ -16,7 +16,7 @@ section.container {
 .owl-home-slider {
     padding:120px 0;
     @include breakpoint(large down) {
-        padding:40px 0;
+        display:none !important;
     }
     .item {
         position:relative;
@@ -253,6 +253,9 @@ section.container {
             text-align: center;
             margin:75px 0;
             position:relative;
+            @include breakpoint(large down) {
+                display:none;
+            }
             &::before, &::after {
                 content:"";
                 display:inline-block;
