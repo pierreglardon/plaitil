@@ -1,9 +1,27 @@
 #footer {
     margin-top:200px;
-    background:#fafafa;
+    background-color:#fafafa;
     margin-right:50px;
     padding:60px 0;
+    overflow:hidden;
+    position:relative;
+    &::before {
+        height:100%;
+        width:100%;
+        content:"";
+        position: absolute;
+        right:-50%;
+        top:0;
+        background-image: url(../plaitil/logo-black.svg);
+        opacity: 0.05;
+        z-index: 0;
+    }
+    > * {
+        position:relative;
+        z-index: 2;
+    }
     .network {
+        margin-bottom:60px;
         a {
             height:32px;
             line-height:32px;
@@ -43,5 +61,28 @@
                 }
             }
         }
+    }
+    #map {
+        height:500px;
+    }
+    section {
+        margin-top:50%;
+        .logo {
+            margin-bottom:20px;
+        }
+        p {
+            color:$p-grey;
+        }
+    }
+}
+footer.black {
+    background:$p-grey;
+    color:#fafafa;
+    text-align:center;
+    font-size:12px;
+    text-transform: uppercase;
+    padding:20px 0;
+    a {
+        color: #fafafa;
     }
 }

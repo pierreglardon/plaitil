@@ -8,10 +8,16 @@ body {
 
 section.container {
     margin-right:50px;
+    @include breakpoint(large down) {
+        margin-right:0;
+    }
 }
 
 .owl-home-slider {
     padding:120px 0;
+    @include breakpoint(large down) {
+        padding:40px 0;
+    }
     .item {
         position:relative;
         &::before, &::after {
@@ -58,7 +64,7 @@ section.container {
             text-align:right;
             width:calc(100% / 12 * 5);
             font-family:$fontplaitil;
-            padding:40px 50px 0 0;
+            padding: 0 30px;
             font-size:30px;
             text-shadow: 3px 4px 10px rgba(0, 0, 0, 0.75);
             a {
@@ -120,6 +126,57 @@ section.container {
         }
     }
 }
+.p-button {
+    display:inline-block;
+    transform: skewX(-20deg);
+    padding: 20px 45px;
+    background: transparent;
+    position:relative;
+    margin:50px 25px;
+    font-family: $fontplaitil;
+    font-size:30px;
+    color:#fafafa;
+    transition:color ease 0.3s;
+    span {
+        display:inline-block;
+        transform: skewX(20deg);
+        position:relative;
+        left:-3px;
+        top:-1px;
+    }
+    &::before, &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transition:top ease 0.25s, left ease 0.25s;
+
+    }
+    &::before {
+        border: 2px solid #ffffff;
+        z-index: 1;
+        top:-2px;
+        left:-2px;
+    }
+    &::after {
+        border: 2px solid $p-red;
+        z-index:0;
+        top:2px;
+        left:2px;
+    }
+    &:hover {
+        color:$p-red;
+        &::before {
+            top:2px;
+            left:2px;
+        }
+        &::after {
+            top:-2px;
+            left:-2px;
+        }
+    }
+}
 .content {
     h2 {
         font-family: $fontplaitil;
@@ -128,6 +185,12 @@ section.container {
         text-align:center;
         + h3 {
             transform:translateY(-100%);
+            @include breakpoint(large down) {
+                transform:translateY(-10%);
+            }
+        }
+        @include breakpoint(large down) {
+            font-size: 40px;
         }
     }
     h3 {
@@ -136,56 +199,8 @@ section.container {
         color:$p-red;
         text-align:center;
     }
-    .p-button {
-        display:inline-block;
-        transform: skewX(-20deg);
-        padding: 20px 45px;
-        background: transparent;
-        position:relative;
-        margin:50px 25px;
-        font-family: $fontplaitil;
-        font-size:30px;
-        color:#fafafa;
-        transition:color ease 0.3s;
-        span {
-            display:inline-block;
-            transform: skewX(20deg);
-            position:relative;
-            left:-3px;
-            top:-1px;
-        }
-        &::before, &::after {
-            content: "";
-            display: block;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            transition:top ease 0.25s, left ease 0.25s;
-
-        }
-        &::before {
-            border: 2px solid #ffffff;
-            z-index: 1;
-            top:-2px;
-            left:-2px;
-        }
-        &::after {
-            border: 2px solid $p-red;
-            z-index:0;
-            top:2px;
-            left:2px;
-        }
-        &:hover {
-            color:$p-red;
-            &::before {
-                top:2px;
-                left:2px;
-            }
-            &::after {
-                top:-2px;
-                left:-2px;
-            }
-        }
+    @include breakpoint(large down) {
+        font-size: 30px;
     }
     #agence {
         margin-bottom:100px;

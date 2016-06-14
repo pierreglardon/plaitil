@@ -22,8 +22,8 @@ get_header(); ?>
                 </a>
             </h2>
             <h3>
-                <a href="<?php the_permalink() ?>">
-                    <?php the_field('sous-titre'); ?>
+                <a href="<?php the_permalink() ?>" class="p-button">
+                    Voir le projet
                 </a>
             </h3>
         </div>

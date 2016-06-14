@@ -1,7 +1,12 @@
 body {
     &.admin-bar {
         #header {
-            top: 32px;
+            top: 46px;
+        }
+        #navigation {
+            @include breakpoint(large down) {
+                top:46px;
+            }
         }
     }
 }
@@ -34,6 +39,23 @@ body {
             }
         }
     }
+    @include breakpoint(large down) {
+        a {
+            margin-left: 0;
+            transform: translate(0);
+            img {
+                height:100px;
+                margin:25px;
+            }
+        }
+        &.mini {
+            a {
+                img {
+                    height:50px;
+                }
+            }
+        }
+    }
 }
 #navigation {
     position:fixed;
@@ -44,6 +66,11 @@ body {
     background:#fafafa;
     transition: width 0.5s 0.5s ease;
     z-index: 1000;
+    @include breakpoint(large down) {
+        background:transparent;
+        height:initial;
+        width:inherit;
+    }
     .menuToggle {
         position:absolute;
         left:0;
@@ -51,6 +78,18 @@ body {
         width:50px;
         cursor: pointer;
         z-index: 20;
+        @include breakpoint(large down) {
+            height:initial;
+            margin:25px 25px 0 0;
+            position: static;
+            float:right;
+            width:inherit;
+            &::after {
+                clear:both;
+                display:block;
+                content:"";
+            }
+        }
         a {
             transform:rotate(-90deg) translateX(50%);;
             display:inline-block;
@@ -59,6 +98,10 @@ body {
             font-weight:lighter;
             position: absolute;
             top: 50%;
+            @include breakpoint(large down) {
+                transform: none;
+                position: static;
+            }
             span {
                 position: absolute;
                 top: 50%;
@@ -66,8 +109,21 @@ body {
                 height:1px;
                 background:$p-red;
                 width:17px;
+                @include breakpoint(large down) {
+                    position: relative;
+                    display: inline-block;
+                    vertical-align: middle;
+                    top: 0;
+                    left:0;
+
+                }
                 &::before, &::after {
-                    @extend span;
+                    position: absolute;
+                    top: 50%;
+                    left: -23px;
+                    height:1px;
+                    background:$p-red;
+                    width:17px;
                     content:"";
                     left:0;
                 }
@@ -84,6 +140,11 @@ body {
         opacity:0;
         transition: opacity ease 0.5s;
         text-align: center;
+        @include breakpoint(large down) {
+            width:100%;
+            right:-100%;
+            position:absolute;
+        }
         ul {
             li {
                 background:transparent;
@@ -97,6 +158,9 @@ body {
                     font-weight: 100;
                     display: inline-block;
                     letter-spacing: 5px;
+                    @include breakpoint(large down) {
+                        font-size:24px;
+                    }
                 }
             }
         }
@@ -104,14 +168,34 @@ body {
             height:350px;
             margin:50px 0;
             max-width:inherit;
+            @include breakpoint(large down) {
+                height:70px;
+                margin:50px 0 30px;
+            }
         }
     }
     &.openMenu {
         width:100%;
         transition: width 0.5s ease;
+        @include breakpoint(large down) {
+            background:#fafafa;
+            aside {
+                margin:0;
+                padding:25px;
+                position:relative;
+                text-align: right;
+            }
+        }
         section {
             opacity: 1;
             transition: opacity 0.5s 0.5s ease;
+            @include breakpoint(large down) {
+                height:inherit;
+                background:#fafafa;
+                right:0;
+                transition: none;
+                padding-bottom: 25px;
+            }
         }
     }
 }
