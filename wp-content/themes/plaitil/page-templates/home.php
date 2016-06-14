@@ -42,19 +42,32 @@ get_header(); ?>
     </div>
 </div>
 
-<div class="row content" id="agence">
-    <div class="columns small-12">
-        <h2>Agence “Plait-il?”</h2>
-        <h3>Exploratrice en web  depuis 2005</h3>
+<section class="content">
+    <div class="row" id="agence">
+        <div class="columns small-12">
+            <h2>Agence “Plait-il?”</h2>
+            <h3>Exploratrice en web  depuis 2005</h3>
+        </div>
+        <aside class="columns large-6">
+            <img src="<?php bloginfo('template_directory') ?>/assets/plaitil/agence.jpg" alt="<?php bloginfo('name') ?>" />
+        </aside>
+        <aside class="columns large-7">
+            <?php while ( have_posts() ) : the_post(); ?>
+                <?php the_content() ?>
+            <?php endwhile;?>
+        </aside>
+        <div class="columns small-12 text-center">
+            <a href="#projet" class="p-button"><span>Projets</span></a>
+            <a href="#contact" class="p-button"><span>Contact</span></a>
+        </div>
     </div>
-    <aside class="columns large-6">
-        <img src="<?php bloginfo('template_directory') ?>/assets/plaitil/agence.jpg" alt="<?php bloginfo('name') ?>" />
-    </aside>
-    <aside class="columns large-7">
-        <?php while ( have_posts() ) : the_post(); ?>
-            <?php the_content() ?>
-        <?php endwhile;?>
-    </aside>
-</div>
+    <div class="row" id="projets">
+        <div class="columns small-12">
+            <h2>Projets</h2>
+            <h3>Quelques unes de nos réalisations</h3>
+        </div>
+    </div>
+</section>
+
 
 <?php get_footer();

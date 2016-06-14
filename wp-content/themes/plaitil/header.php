@@ -20,6 +20,8 @@
 	<body <?php body_class(); ?>>
 	<?php do_action( 'foundationpress_after_body' ); ?>
 
+	<div id="accueil"></div>
+
 	<header id="header">
 		<a href="<?php bloginfo('url') ?>">
 			<img src="<?php bloginfo('template_directory') ?>/assets/plaitil/logo-red.svg" alt="<?php bloginfo('name') ?>" />

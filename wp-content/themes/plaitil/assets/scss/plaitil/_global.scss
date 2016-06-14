@@ -136,7 +136,59 @@ section.container {
         color:$p-red;
         text-align:center;
     }
-    &#agence {
+    .p-button {
+        display:inline-block;
+        transform: skewX(-20deg);
+        padding: 20px 45px;
+        background: transparent;
+        position:relative;
+        margin:50px 25px;
+        font-family: $fontplaitil;
+        font-size:30px;
+        color:#fafafa;
+        transition:color ease 0.3s;
+        span {
+            display:inline-block;
+            transform: skewX(20deg);
+            position:relative;
+            left:-3px;
+            top:-1px;
+        }
+        &::before, &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transition:top ease 0.3s, left ease 0.3s;
+
+        }
+        &::before {
+            border: 2px solid #ffffff;
+            z-index: 1;
+            top:-2px;
+            left:-2px;
+        }
+        &::after {
+            border: 2px solid $p-red;
+            z-index:0;
+            top:2px;
+            left:2px;
+        }
+        &:hover {
+            color:$p-red;
+            &::before {
+                top:2px;
+                left:2px;
+            }
+            &::after {
+                top:-2px;
+                left:-2px;
+            }
+        }
+    }
+    #agence {
+        margin-bottom:100px;
         aside {
             height: 300px;
             &.large-6 {
@@ -156,8 +208,8 @@ section.container {
                     left:0;
                     width:100%;
                     height:100%;
-                    background:#000;
-                    opacity: 0.5;
+                    background-image:linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.8));
+                    opacity: 0.3;
                     content:"";
                     z-index: 2;
                 }
@@ -171,11 +223,16 @@ section.container {
                     margin-bottom:0;
                     vertical-align: middle;
                     display: inline-block;
-                    font-size:16px;
+                    font-size:14px;
                     line-height: 20px;
-                    font-weight: 100;
+                    font-weight: 400;
+                    background: rgba(0,0,0,0.4);
+                    padding: 15px;
                 }
             }
         }
+    }
+    #projets {
+        margin-top:50px;
     }
 }

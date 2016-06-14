@@ -19,7 +19,7 @@ body {
         transform: translateX(-50%);
         transition: all ease 0.5s;
         img {
-            margin:50px 0;
+            margin:50px;
             height:350px;
             transition:all cubic-bezier(.29,-0.77,.51,1.73) 0.5s;
         }
@@ -30,7 +30,7 @@ body {
             transform: translate(0);
             img {
                 height:100px;
-                margin:25px 0;
+                margin:25px;
             }
         }
     }
