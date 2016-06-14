@@ -92,6 +92,9 @@ get_header(); ?>
             <h2>Contact</h2>
             <h3>Ne soyez pas timide</h3>
         </div>
+        <div class="columns small-12">
+            <?php the_field('contact_form') ?>
+        </div>
     </div>
 </section>
 
