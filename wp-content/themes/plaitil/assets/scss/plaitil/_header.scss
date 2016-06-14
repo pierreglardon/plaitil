@@ -1,0 +1,117 @@
+body {
+    &.admin-bar {
+        #header {
+            top: 32px;
+        }
+    }
+}
+#header {
+    position:fixed;
+    top:0;
+    width:100%;
+    height:0;
+    padding-right:50px;
+    z-index: 100;
+    a {
+        margin:auto;
+        display:inline-block;
+        margin-left:50%;
+        transform: translateX(-50%);
+        transition: all ease 0.5s;
+        img {
+            margin:50px 0;
+            height:350px;
+            transition:all cubic-bezier(.29,-0.77,.51,1.73) 0.5s;
+        }
+    }
+    &.mini {
+        a {
+            margin-left: 0;
+            transform: translate(0);
+            img {
+                height:100px;
+                margin:25px 0;
+            }
+        }
+    }
+}
+#navigation {
+    position:fixed;
+    top:0;
+    right:0;
+    height:100%;
+    width:50px;
+    background:#fafafa;
+    transition: width 0.5s 0.5s ease;
+    z-index: 1000;
+    .menuToggle {
+        position:absolute;
+        left:0;
+        height:100%;
+        width:50px;
+        cursor: pointer;
+        z-index: 20;
+        a {
+            transform:rotate(-90deg) translateX(50%);;
+            display:inline-block;
+            font-size:18px;
+            color:$p-red;
+            font-weight:lighter;
+            position: absolute;
+            top: 50%;
+            span {
+                position: absolute;
+                top: 50%;
+                left: -23px;
+                height:1px;
+                background:$p-red;
+                width:17px;
+                &::before, &::after {
+                    @extend span;
+                    content:"";
+                    left:0;
+                }
+                &::before {
+                    top:-5px;
+                }
+                &::after {
+                    top:5px;
+                }
+            }
+        }
+    }
+    > section {
+        opacity:0;
+        transition: opacity ease 0.5s;
+        text-align: center;
+        ul {
+            li {
+                background:transparent;
+                display:block;
+                margin:auto;
+                text-align:center;
+                a {
+                    color:$p-red;
+                    font-size:72px;
+                    text-transform:uppercase;
+                    font-weight: 100;
+                    display: inline-block;
+                    letter-spacing: 5px;
+                }
+            }
+        }
+        .logo {
+            height:350px;
+            margin:50px 0;
+            max-width:inherit;
+        }
+    }
+    &.openMenu {
+        width:100%;
+        transition: width 0.5s ease;
+        section {
+            opacity: 1;
+            transition: opacity 0.5s 0.5s ease;
+        }
+    }
+}

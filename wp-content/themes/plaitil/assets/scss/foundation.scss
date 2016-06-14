@@ -74,6 +74,10 @@
   My custom styles:
   Add your scss files below to structure your project styles
 */
+@import "plaitil/header";
+@import "plaitil/footer";
+@import "plaitil/global";
+@import url(https://fonts.googleapis.com/css?family=Kaushan+Script);
 
 // Modules
 @import "modules/navigation";

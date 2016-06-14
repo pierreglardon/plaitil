@@ -1,0 +1,181 @@
+body {
+    background: $p-grey;
+    color: #fafafa;
+    &.openMenu {
+        overflow-y: hidden;
+    }
+}
+
+section.container {
+    margin-right:50px;
+}
+
+.owl-home-slider {
+    padding:120px 0;
+    .item {
+        position:relative;
+        &::before, &::after {
+            clear:both;
+            content:"";
+            display:block;
+        }
+        aside {
+            height:240px;
+            overflow:hidden;
+            width:calc(100% / 12 * 7);
+            box-shadow: 3px 4px 10px 0px rgba(0, 0, 0, 0.75);
+            &.image-1 {
+                float:left;
+                position:relative;
+                z-index:1;
+            }
+            &.image-2 {
+                float:right;
+                margin-top:-100px;
+                position:relative;
+                z-index:2;
+            }
+        }
+        h2 {
+            position:absolute;
+            top:0;
+            right:0;
+            width:calc(100% / 12 * 5);
+            text-align:left;
+            font-family:$fontplaitil;
+            font-size:60px;
+            padding:25px 0 0 50px;
+            text-shadow: 3px 4px 10px rgba(0, 0, 0, 0.75);
+            a {
+                color: $p-red;
+            }
+        }
+        h3 {
+            position:absolute;
+            top:240px;
+            bottom:0;
+            left:0;
+            text-align:right;
+            width:calc(100% / 12 * 5);
+            font-family:$fontplaitil;
+            padding:40px 50px 0 0;
+            font-size:30px;
+            text-shadow: 3px 4px 10px rgba(0, 0, 0, 0.75);
+            a {
+                color: $p-red;
+            }
+        }
+        &.contact {
+            position:static;
+            section {
+                margin-top:50px;
+                text-align: center;
+                h2, h3 {
+                    width:100%;
+                    position:static;
+                    margin:0;
+                    text-align: center;
+                    padding:0;
+                }
+                h2 {
+                    color: $p-red;
+                }
+                h3 {
+                    font-family:$body-font-family;
+                    margin-top:30px;
+                    width: inherit;
+                    a {
+                        display:inline-block;
+                        color:#fafafa;
+                        padding:5px 40px;
+                        border:3px solid #fafafa;
+                        box-sizing: border-box;
+                    }
+                }
+            }
+        }
+    }
+    .owl-dots {
+        margin-top:50px;
+        .owl-dot {
+            float: left;
+            width: 30%;
+            margin-right:3.33333%;
+            &:last-of-type {
+                margin-right:0;
+            }
+            span {
+                height:100px;
+                margin:20px 0;
+                height:2px;
+                background: #fafafa;
+                transition: all ease 0.5s;
+                display:block;
+            }
+            &.active {
+                span {
+                    background:$p-red;
+                }
+            }
+        }
+    }
+}
+.content {
+    h2 {
+        font-family: $fontplaitil;
+        font-size:140px;
+        color:#fafafa;
+        text-align:center;
+        + h3 {
+            transform:translateY(-100%);
+        }
+    }
+    h3 {
+        font-family: $fontplaitil;
+        font-size:60px;
+        color:$p-red;
+        text-align:center;
+    }
+    &#agence {
+        aside {
+            height: 300px;
+            &.large-6 {
+                overflow: hidden;
+                position: relative;
+                position:relative;
+                z-index: 1;
+                img {
+                    position: absolute;
+                    z-index: 1;
+                    transform: translate(-50%, -50%);
+                    max-width:inherit;
+                }
+                &::before {
+                    position:absolute;
+                    top:0;
+                    left:0;
+                    width:100%;
+                    height:100%;
+                    background:#000;
+                    opacity: 0.5;
+                    content:"";
+                    z-index: 2;
+                }
+            }
+            &:last-of-type {
+                margin-left: calc(-100% / 12);
+                position:relative;
+                z-index: 2;
+                line-height:300px;
+                p {
+                    margin-bottom:0;
+                    vertical-align: middle;
+                    display: inline-block;
+                    font-size:16px;
+                    line-height: 20px;
+                    font-weight: 100;
+                }
+            }
+        }
+    }
+}
