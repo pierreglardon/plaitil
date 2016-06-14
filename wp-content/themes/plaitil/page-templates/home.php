@@ -65,6 +65,32 @@ get_header(); ?>
         <div class="columns small-12">
             <h2>Projets</h2>
             <h3>Quelques unes de nos réalisations</h3>
+            <p class="text-center">
+                Voici quelques uns des projets dont nous sommes fiers ! Notre équipe Web Design effectue une veille permanente afin de vous faire profiter des dernières tendances et innovations pour un design unique et impactant.
+            </p>
+
+            <?php
+                $catquery = new WP_Query( 'cat=2&posts_per_page=5' );
+                while($catquery->have_posts()) : $catquery->the_post();
+            ?>
+                <div class="projet">
+                    <section>
+                        <img src="<?php the_field('image_zone_projets_home'); ?>" alt="<?php the_title() ?>" />
+                    </section>
+                    <aside>
+                        <h4><?php the_title() ?></h4>
+                        <h5><?php the_field('sous-titre') ?></h5>
+                        <a href="<?php the_permalink() ?>" class="p-button">Voir +</a>
+                    </aside>
+
+                </div>
+            <?php endwhile; ?>
+        </div>
+    </div>
+    <div class="row" id="contact">
+        <div class="columns small-12">
+            <h2>Contact</h2>
+            <h3>Ne soyez pas timide</h3>
         </div>
     </div>
 </section>
