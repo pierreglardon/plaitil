@@ -57,7 +57,7 @@ get_header(); ?>
             <?php endwhile;?>
         </aside>
         <div class="columns small-12 text-center">
-            <a href="#projet" class="p-button"><span>Projets</span></a>
+            <a href="#projets" class="p-button"><span>Projets</span></a>
             <a href="#contact" class="p-button"><span>Contact</span></a>
         </div>
     </div>
@@ -75,6 +75,7 @@ get_header(); ?>
             ?>
                 <div class="projet">
                     <section>
+                        <a href="<?php the_permalink() ?>"></a>
                         <img src="<?php the_field('image_zone_projets_home'); ?>" alt="<?php the_title() ?>" />
                     </section>
                     <aside>

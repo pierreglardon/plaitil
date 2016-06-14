@@ -6,7 +6,6 @@ function logoSize() {
         $('#header').removeClass('mini');
     }
 }
-
 logoSize();
 $(window).scroll(function() {
     logoSize();

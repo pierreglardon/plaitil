@@ -10,6 +10,7 @@ section.container {
     margin-right:50px;
     @include breakpoint(large down) {
         margin-right:0;
+        margin-top:50px !important;
     }
 }
 
@@ -178,6 +179,9 @@ section.container {
     }
 }
 .content {
+    @include breakpoint(large down) {
+        padding-top:0;
+    }
     h2 {
         font-family: $fontplaitil;
         font-size:140px;
@@ -198,19 +202,28 @@ section.container {
         font-size:60px;
         color:$p-red;
         text-align:center;
-    }
-    @include breakpoint(large down) {
-        font-size: 30px;
+        @include breakpoint(large down) {
+            font-size: 30px;
+        }
     }
     #agence {
         margin-bottom:100px;
+        @include breakpoint(large down) {
+            padding-top:130px;
+            margin-bottom: 0;
+        }
         aside {
             height: 300px;
             &.large-6 {
                 overflow: hidden;
                 position: relative;
-                position:relative;
                 z-index: 1;
+                @include breakpoint(large down) {
+                    z-index: 1;
+                    margin: auto;
+                    float: none;
+                    width: 90%;
+                }
                 img {
                     position: absolute;
                     z-index: 1;
@@ -234,6 +247,10 @@ section.container {
                 position:relative;
                 z-index: 2;
                 line-height:300px;
+                @include breakpoint(large down) {
+                    margin-left:0;
+                    height:inherit;
+                }
                 p {
                     margin-bottom:0;
                     vertical-align: middle;
@@ -246,15 +263,24 @@ section.container {
                 }
             }
         }
+        @include breakpoint(large down) {
+            .p-button {
+                margin: 25px;
+            }
+        }
     }
     #projets {
         margin-top:50px;
+        @include breakpoint(large down) {
+            margin-top:0;
+            padding-top:130px;
+        }
         .projet {
             text-align: center;
             margin:75px 0;
             position:relative;
             @include breakpoint(large down) {
-                display:none;
+                margin:30px 0;
             }
             &::before, &::after {
                 content:"";
@@ -278,6 +304,17 @@ section.container {
                 margin-right:0;
                 transition: all ease 0.5s;
                 overflow:hidden;
+                a {
+                    display:none;
+                    position:absolute;
+                    left:0;
+                    right:0;
+                    height:100%;
+                    width:100%;
+                    @include breakpoint(large down) {
+                        display:block;
+                    }
+                }
                 img {
                     width:100%;
                     max-width: inherit;
@@ -292,6 +329,9 @@ section.container {
                 transform: translateY(-50%);
                 text-align: left;
                 transition: all ease 0.5s;
+                @include breakpoint(large down) {
+                    display:none;
+                }
                 h4 {
                     font-family: $fontplaitil;
                     font-size: 48px;
@@ -311,6 +351,9 @@ section.container {
                 section {
                     margin-right:calc(100% / 12 * 2);
                     border-radius: 50%;
+                    @include breakpoint(large down) {
+                        margin-right: 0;
+                    }
                 }
                 aside {
                     opacity: 1;
@@ -322,14 +365,28 @@ section.container {
     }
     #contact {
         margin-top:150px;
+        @include breakpoint(large down) {
+            margin-top:0;
+            padding-top:130px;
+        }
         h2 {
             margin-right:10%;
+            @include breakpoint(large down) {
+                margin-right:0;
+                margin-bottom:0;
+            }
         }
         h3 {
             margin-left:10%;
+            @include breakpoint(large down) {
+                margin-left:0;
+            }
         }
         p {
             margin-bottom:80px;
+            @include breakpoint(large down) {
+                margin-bottom:40px;
+            }
         }
         .large-centered {
             float:none !important;
