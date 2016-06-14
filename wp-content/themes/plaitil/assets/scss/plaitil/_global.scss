@@ -222,13 +222,19 @@ section.container {
                     z-index: 1;
                     margin: auto;
                     float: none;
-                    width: 90%;
+                    width: calc(100% - 1.8750rem);
+                }
+                @include breakpoint(small down) {
+                    width: calc(100% - 1.25rem);
                 }
                 img {
                     position: absolute;
                     z-index: 1;
                     transform: translate(-50%, -50%);
                     max-width:inherit;
+                    @include breakpoint(large down) {
+                        transform: translate(-30%, -30%);
+                    }
                 }
                 &::before {
                     position:absolute;
@@ -248,8 +254,12 @@ section.container {
                 z-index: 2;
                 line-height:300px;
                 @include breakpoint(large down) {
+                    width:100%;
                     margin-left:0;
                     height:inherit;
+                    line-height: inherit;
+                    margin-top:1rem;
+                    margin-bottom:2rem;
                 }
                 p {
                     margin-bottom:0;
