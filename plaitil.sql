@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.4.15.5
+-- version 4.4.14
 -- http://www.phpmyadmin.net
 --
--- Client :  localhost:3306
--- Généré le :  Mar 14 Juin 2016 à 22:45
--- Version du serveur :  5.5.49-log
--- Version de PHP :  7.0.6
+-- Client :  localhost
+-- Généré le :  Mer 15 Juin 2016 à 11:44
+-- Version du serveur :  5.6.26
+-- Version de PHP :  5.6.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -97,7 +97,7 @@ CREATE TABLE IF NOT EXISTS `wp_options` (
   `option_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `option_value` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `autoload` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'yes'
-) ENGINE=InnoDB AUTO_INCREMENT=195 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=204 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Contenu de la table `wp_options`
@@ -207,7 +207,7 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (101, 'widget_calendar', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
 (102, 'widget_tag_cloud', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
 (103, 'widget_nav_menu', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
-(104, 'cron', 'a:4:{i:1465959026;a:3:{s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1466002826;a:1:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1466003298;a:1:{s:30:"wp_scheduled_auto_draft_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}s:7:"version";i:2;}', 'yes'),
+(104, 'cron', 'a:4:{i:1466002226;a:3:{s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1466002826;a:1:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1466003298;a:1:{s:30:"wp_scheduled_auto_draft_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}s:7:"version";i:2;}', 'yes'),
 (115, '_site_transient_timeout_browser_ebd1b03c5baa508a78929787d17bbfb6', '1466434304', 'yes'),
 (116, '_site_transient_browser_ebd1b03c5baa508a78929787d17bbfb6', 'a:9:{s:8:"platform";s:9:"Macintosh";s:4:"name";s:6:"Chrome";s:7:"version";s:12:"51.0.2704.79";s:10:"update_url";s:28:"http://www.google.com/chrome";s:7:"img_src";s:49:"http://s.wordpress.org/images/browsers/chrome.png";s:11:"img_src_ssl";s:48:"https://wordpress.org/images/browsers/chrome.png";s:15:"current_version";s:2:"18";s:7:"upgrade";b:0;s:8:"insecure";b:0;}', 'yes'),
 (119, 'can_compress_scripts', '1', 'yes'),
@@ -244,14 +244,14 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (181, '_transient_timeout_dash_bd94b8f41e74bae2f4dc72e9bd8379af', '1465938253', 'no'),
 (182, '_transient_dash_bd94b8f41e74bae2f4dc72e9bd8379af', '<div class="rss-widget"><ul><li><a class=''rsswidget'' href=''http://feedproxy.google.com/~r/WordpressFrancophone/~3/jnTdGpX49Y0/''>En route vers le nouveau site !</a> <span class="rss-date">1 juin 2016</span><div class="rssSummary">Lors de l’article du 23 mai, nous avons proposé à celles et ceux qui le souhaitaient de participer à la refonte du site et du forum de wordpress-fr.net. Une quinzaine de volontaires ont répondu à notre appel, nous les en remercions ! Les participants ont reçu les indications pour nous rejoindre sur le slack de [&hellip;]</div></li></ul></div><div class="rss-widget"><ul><li><a class=''rsswidget'' href=''http://feedproxy.google.com/~r/wordpress-fr/RaoY/~3/QhRzPoVi3Ok/''>L&#039;écho des plugins WordPress : Thème ? Check. Thème enfant ? Check.</a></li><li><a class=''rsswidget'' href=''http://feedproxy.google.com/~r/wordpress-fr/RaoY/~3/H_YKlLhxyEY/''>WP Formation : Tuto : Installer Piwik pour WordPress</a></li><li><a class=''rsswidget'' href=''http://feedproxy.google.com/~r/wordpress-fr/RaoY/~3/d0Pj6cmMXKE/''>WordPress Channel : Détecter une page sans enfant sous WordPress</a></li></ul></div><div class="rss-widget"><ul><li class="dashboard-news-plugin"><span>Extensions populaires:</span> Meta Slider&nbsp;<a href="plugin-install.php?tab=plugin-information&amp;plugin=ml-slider&amp;_wpnonce=170b9a7d97&amp;TB_iframe=true&amp;width=600&amp;height=800" class="thickbox open-plugin-details-modal" aria-label="Installer Meta Slider">(Installer)</a></li></ul></div>', 'no'),
 (183, 'wpcf7', 'a:2:{s:7:"version";s:5:"4.4.2";s:13:"bulk_validate";a:4:{s:9:"timestamp";d:1465912985;s:7:"version";s:5:"4.4.2";s:11:"count_valid";i:1;s:13:"count_invalid";i:0;}}', 'yes'),
-(186, '_site_transient_timeout_theme_roots', '1465917653', 'yes'),
-(187, '_site_transient_theme_roots', 'a:2:{s:7:"plaitil";s:7:"/themes";s:13:"twentysixteen";s:7:"/themes";}', 'yes'),
-(188, '_site_transient_update_core', 'O:8:"stdClass":4:{s:7:"updates";a:3:{i:0;O:8:"stdClass":10:{s:8:"response";s:7:"upgrade";s:8:"download";s:65:"https://downloads.wordpress.org/release/fr_FR/wordpress-4.5.2.zip";s:6:"locale";s:5:"fr_FR";s:8:"packages";O:8:"stdClass":5:{s:4:"full";s:65:"https://downloads.wordpress.org/release/fr_FR/wordpress-4.5.2.zip";s:10:"no_content";b:0;s:11:"new_bundled";b:0;s:7:"partial";b:0;s:8:"rollback";b:0;}s:7:"current";s:5:"4.5.2";s:7:"version";s:5:"4.5.2";s:11:"php_version";s:5:"5.2.4";s:13:"mysql_version";s:3:"5.0";s:11:"new_bundled";s:3:"4.4";s:15:"partial_version";s:0:"";}i:1;O:8:"stdClass":10:{s:8:"response";s:7:"upgrade";s:8:"download";s:59:"https://downloads.wordpress.org/release/wordpress-4.5.2.zip";s:6:"locale";s:5:"en_US";s:8:"packages";O:8:"stdClass":5:{s:4:"full";s:59:"https://downloads.wordpress.org/release/wordpress-4.5.2.zip";s:10:"no_content";s:70:"https://downloads.wordpress.org/release/wordpress-4.5.2-no-content.zip";s:11:"new_bundled";s:71:"https://downloads.wordpress.org/release/wordpress-4.5.2-new-bundled.zip";s:7:"partial";s:69:"https://downloads.wordpress.org/release/wordpress-4.5.2-partial-0.zip";s:8:"rollback";b:0;}s:7:"current";s:5:"4.5.2";s:7:"version";s:5:"4.5.2";s:11:"php_version";s:5:"5.2.4";s:13:"mysql_version";s:3:"5.0";s:11:"new_bundled";s:3:"4.4";s:15:"partial_version";s:3:"4.5";}i:2;O:8:"stdClass":11:{s:8:"response";s:10:"autoupdate";s:8:"download";s:65:"https://downloads.wordpress.org/release/fr_FR/wordpress-4.5.2.zip";s:6:"locale";s:5:"fr_FR";s:8:"packages";O:8:"stdClass":5:{s:4:"full";s:65:"https://downloads.wordpress.org/release/fr_FR/wordpress-4.5.2.zip";s:10:"no_content";b:0;s:11:"new_bundled";b:0;s:7:"partial";b:0;s:8:"rollback";b:0;}s:7:"current";s:5:"4.5.2";s:7:"version";s:5:"4.5.2";s:11:"php_version";s:5:"5.2.4";s:13:"mysql_version";s:3:"5.0";s:11:"new_bundled";s:3:"4.4";s:15:"partial_version";s:0:"";s:9:"new_files";s:1:"1";}}s:12:"last_checked";i:1465915856;s:15:"version_checked";s:3:"4.5";s:12:"translations";a:1:{i:0;a:7:{s:4:"type";s:4:"core";s:4:"slug";s:7:"default";s:8:"language";s:5:"fr_FR";s:7:"version";s:3:"4.5";s:7:"updated";s:19:"2016-04-26 10:56:36";s:7:"package";s:62:"https://downloads.wordpress.org/translation/core/4.5/fr_FR.zip";s:10:"autoupdate";b:1;}}}', 'yes'),
-(189, '_site_transient_update_themes', 'O:8:"stdClass":4:{s:12:"last_checked";i:1465915859;s:7:"checked";a:2:{s:7:"plaitil";s:5:"2.6.2";s:13:"twentysixteen";s:3:"1.2";}s:8:"response";a:0:{}s:12:"translations";a:0:{}}', 'yes');
-INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`) VALUES
-(190, '_site_transient_update_plugins', 'O:8:"stdClass":4:{s:12:"last_checked";i:1465915858;s:8:"response";a:0:{}s:12:"translations";a:1:{i:0;a:7:{s:4:"type";s:6:"plugin";s:4:"slug";s:14:"contact-form-7";s:8:"language";s:5:"fr_FR";s:7:"version";s:5:"4.4.2";s:7:"updated";s:19:"2016-06-06 07:23:37";s:7:"package";s:81:"https://downloads.wordpress.org/translation/plugin/contact-form-7/4.4.2/fr_FR.zip";s:10:"autoupdate";b:1;}}s:9:"no_update";a:2:{s:30:"advanced-custom-fields/acf.php";O:8:"stdClass":6:{s:2:"id";s:5:"21367";s:4:"slug";s:22:"advanced-custom-fields";s:6:"plugin";s:30:"advanced-custom-fields/acf.php";s:11:"new_version";s:5:"4.4.7";s:3:"url";s:53:"https://wordpress.org/plugins/advanced-custom-fields/";s:7:"package";s:71:"https://downloads.wordpress.org/plugin/advanced-custom-fields.4.4.7.zip";}s:36:"contact-form-7/wp-contact-form-7.php";O:8:"stdClass":6:{s:2:"id";s:3:"790";s:4:"slug";s:14:"contact-form-7";s:6:"plugin";s:36:"contact-form-7/wp-contact-form-7.php";s:11:"new_version";s:5:"4.4.2";s:3:"url";s:45:"https://wordpress.org/plugins/contact-form-7/";s:7:"package";s:63:"https://downloads.wordpress.org/plugin/contact-form-7.4.4.2.zip";}}}', 'yes'),
 (193, '_site_transient_timeout_browser_222abfbb837e8251e89b3e5f82b4316b', '1466542254', 'yes'),
-(194, '_site_transient_browser_222abfbb837e8251e89b3e5f82b4316b', 'a:9:{s:8:"platform";s:7:"Windows";s:4:"name";s:6:"Chrome";s:7:"version";s:11:"53.0.2763.0";s:10:"update_url";s:28:"http://www.google.com/chrome";s:7:"img_src";s:49:"http://s.wordpress.org/images/browsers/chrome.png";s:11:"img_src_ssl";s:48:"https://wordpress.org/images/browsers/chrome.png";s:15:"current_version";s:2:"18";s:7:"upgrade";b:0;s:8:"insecure";b:0;}', 'yes');
+(194, '_site_transient_browser_222abfbb837e8251e89b3e5f82b4316b', 'a:9:{s:8:"platform";s:7:"Windows";s:4:"name";s:6:"Chrome";s:7:"version";s:11:"53.0.2763.0";s:10:"update_url";s:28:"http://www.google.com/chrome";s:7:"img_src";s:49:"http://s.wordpress.org/images/browsers/chrome.png";s:11:"img_src_ssl";s:48:"https://wordpress.org/images/browsers/chrome.png";s:15:"current_version";s:2:"18";s:7:"upgrade";b:0;s:8:"insecure";b:0;}', 'yes'),
+(197, '_site_transient_timeout_theme_roots', '1465975925', 'yes'),
+(198, '_site_transient_theme_roots', 'a:2:{s:7:"plaitil";s:7:"/themes";s:13:"twentysixteen";s:7:"/themes";}', 'yes'),
+(199, '_site_transient_update_core', 'O:8:"stdClass":4:{s:7:"updates";a:3:{i:0;O:8:"stdClass":10:{s:8:"response";s:7:"upgrade";s:8:"download";s:65:"https://downloads.wordpress.org/release/fr_FR/wordpress-4.5.2.zip";s:6:"locale";s:5:"fr_FR";s:8:"packages";O:8:"stdClass":5:{s:4:"full";s:65:"https://downloads.wordpress.org/release/fr_FR/wordpress-4.5.2.zip";s:10:"no_content";b:0;s:11:"new_bundled";b:0;s:7:"partial";b:0;s:8:"rollback";b:0;}s:7:"current";s:5:"4.5.2";s:7:"version";s:5:"4.5.2";s:11:"php_version";s:5:"5.2.4";s:13:"mysql_version";s:3:"5.0";s:11:"new_bundled";s:3:"4.4";s:15:"partial_version";s:0:"";}i:1;O:8:"stdClass":10:{s:8:"response";s:7:"upgrade";s:8:"download";s:59:"https://downloads.wordpress.org/release/wordpress-4.5.2.zip";s:6:"locale";s:5:"en_US";s:8:"packages";O:8:"stdClass":5:{s:4:"full";s:59:"https://downloads.wordpress.org/release/wordpress-4.5.2.zip";s:10:"no_content";s:70:"https://downloads.wordpress.org/release/wordpress-4.5.2-no-content.zip";s:11:"new_bundled";s:71:"https://downloads.wordpress.org/release/wordpress-4.5.2-new-bundled.zip";s:7:"partial";s:69:"https://downloads.wordpress.org/release/wordpress-4.5.2-partial-0.zip";s:8:"rollback";b:0;}s:7:"current";s:5:"4.5.2";s:7:"version";s:5:"4.5.2";s:11:"php_version";s:5:"5.2.4";s:13:"mysql_version";s:3:"5.0";s:11:"new_bundled";s:3:"4.4";s:15:"partial_version";s:3:"4.5";}i:2;O:8:"stdClass":11:{s:8:"response";s:10:"autoupdate";s:8:"download";s:65:"https://downloads.wordpress.org/release/fr_FR/wordpress-4.5.2.zip";s:6:"locale";s:5:"fr_FR";s:8:"packages";O:8:"stdClass":5:{s:4:"full";s:65:"https://downloads.wordpress.org/release/fr_FR/wordpress-4.5.2.zip";s:10:"no_content";b:0;s:11:"new_bundled";b:0;s:7:"partial";b:0;s:8:"rollback";b:0;}s:7:"current";s:5:"4.5.2";s:7:"version";s:5:"4.5.2";s:11:"php_version";s:5:"5.2.4";s:13:"mysql_version";s:3:"5.0";s:11:"new_bundled";s:3:"4.4";s:15:"partial_version";s:0:"";s:9:"new_files";s:1:"1";}}s:12:"last_checked";i:1465974128;s:15:"version_checked";s:3:"4.5";s:12:"translations";a:1:{i:0;a:7:{s:4:"type";s:4:"core";s:4:"slug";s:7:"default";s:8:"language";s:5:"fr_FR";s:7:"version";s:3:"4.5";s:7:"updated";s:19:"2016-04-26 10:56:36";s:7:"package";s:62:"https://downloads.wordpress.org/translation/core/4.5/fr_FR.zip";s:10:"autoupdate";b:1;}}}', 'yes'),
+(200, '_site_transient_update_themes', 'O:8:"stdClass":4:{s:12:"last_checked";i:1465974131;s:7:"checked";a:2:{s:7:"plaitil";s:5:"2.6.2";s:13:"twentysixteen";s:3:"1.2";}s:8:"response";a:0:{}s:12:"translations";a:0:{}}', 'yes');
+INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`) VALUES
+(201, '_site_transient_update_plugins', 'O:8:"stdClass":4:{s:12:"last_checked";i:1465974130;s:8:"response";a:0:{}s:12:"translations";a:1:{i:0;a:7:{s:4:"type";s:6:"plugin";s:4:"slug";s:14:"contact-form-7";s:8:"language";s:5:"fr_FR";s:7:"version";s:5:"4.4.2";s:7:"updated";s:19:"2016-06-06 07:23:37";s:7:"package";s:81:"https://downloads.wordpress.org/translation/plugin/contact-form-7/4.4.2/fr_FR.zip";s:10:"autoupdate";b:1;}}s:9:"no_update";a:2:{s:30:"advanced-custom-fields/acf.php";O:8:"stdClass":6:{s:2:"id";s:5:"21367";s:4:"slug";s:22:"advanced-custom-fields";s:6:"plugin";s:30:"advanced-custom-fields/acf.php";s:11:"new_version";s:5:"4.4.7";s:3:"url";s:53:"https://wordpress.org/plugins/advanced-custom-fields/";s:7:"package";s:71:"https://downloads.wordpress.org/plugin/advanced-custom-fields.4.4.7.zip";}s:36:"contact-form-7/wp-contact-form-7.php";O:8:"stdClass":6:{s:2:"id";s:3:"790";s:4:"slug";s:14:"contact-form-7";s:6:"plugin";s:36:"contact-form-7/wp-contact-form-7.php";s:11:"new_version";s:5:"4.4.2";s:3:"url";s:45:"https://wordpress.org/plugins/contact-form-7/";s:7:"package";s:63:"https://downloads.wordpress.org/plugin/contact-form-7.4.4.2.zip";}}}', 'yes');
 
 -- --------------------------------------------------------
 
@@ -264,7 +264,7 @@ CREATE TABLE IF NOT EXISTS `wp_postmeta` (
   `post_id` bigint(20) unsigned NOT NULL DEFAULT '0',
   `meta_key` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `meta_value` longtext COLLATE utf8mb4_unicode_ci
-) ENGINE=InnoDB AUTO_INCREMENT=317 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=331 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Contenu de la table `wp_postmeta`
@@ -282,7 +282,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (10, 7, 'position', 'normal'),
 (11, 7, 'layout', 'no_box'),
 (12, 7, 'hide_on_screen', ''),
-(13, 7, '_edit_lock', '1465905540:1'),
+(13, 7, '_edit_lock', '1465978568:1'),
 (14, 7, 'field_575fa882c6a8c', 'a:14:{s:3:"key";s:19:"field_575fa882c6a8c";s:5:"label";s:14:"date du projet";s:4:"name";s:14:"date_du_projet";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}'),
 (16, 7, 'field_575fa843c6a8b', 'a:11:{s:3:"key";s:19:"field_575fa843c6a8b";s:5:"label";s:23:"image zone projets home";s:4:"name";s:23:"image_zone_projets_home";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:11:"save_format";s:3:"url";s:12:"preview_size";s:6:"medium";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:2;}'),
 (18, 8, '_edit_last', '1'),
@@ -468,7 +468,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (209, 31, 'image_du_projet_3', '34'),
 (210, 31, '_image_du_projet_3', 'field_575fac2da0529'),
 (211, 37, '_edit_last', '1'),
-(212, 37, '_edit_lock', '1465888497:1'),
+(212, 37, '_edit_lock', '1465974315:1'),
 (213, 38, '_wp_attached_file', '2016/06/anne-fontaine-1.png'),
 (214, 38, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:1479;s:6:"height";i:951;s:4:"file";s:27:"2016/06/anne-fontaine-1.png";s:5:"sizes";a:7:{s:9:"thumbnail";a:4:{s:4:"file";s:27:"anne-fontaine-1-150x150.png";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:9:"image/png";}s:6:"medium";a:4:{s:4:"file";s:27:"anne-fontaine-1-300x193.png";s:5:"width";i:300;s:6:"height";i:193;s:9:"mime-type";s:9:"image/png";}s:12:"medium_large";a:4:{s:4:"file";s:27:"anne-fontaine-1-768x494.png";s:5:"width";i:768;s:6:"height";i:494;s:9:"mime-type";s:9:"image/png";}s:5:"large";a:4:{s:4:"file";s:28:"anne-fontaine-1-1024x658.png";s:5:"width";i:1024;s:6:"height";i:658;s:9:"mime-type";s:9:"image/png";}s:8:"fp-small";a:4:{s:4:"file";s:27:"anne-fontaine-1-640x412.png";s:5:"width";i:640;s:6:"height";i:412;s:9:"mime-type";s:9:"image/png";}s:9:"fp-medium";a:4:{s:4:"file";s:28:"anne-fontaine-1-1024x658.png";s:5:"width";i:1024;s:6:"height";i:658;s:9:"mime-type";s:9:"image/png";}s:8:"fp-large";a:4:{s:4:"file";s:28:"anne-fontaine-1-1200x772.png";s:5:"width";i:1200;s:6:"height";i:772;s:9:"mime-type";s:9:"image/png";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
 (215, 39, '_wp_attached_file', '2016/06/anne-fontaine-2.png'),
@@ -493,7 +493,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (235, 42, '_image_du_projet_3', 'field_575fac2da0529'),
 (236, 37, 'sous-titre', 'Refonte du site internet de la styliste'),
 (237, 37, '_sous-titre', 'field_575fa7e6ed66a'),
-(238, 37, 'date_du_projet', 'septembre 2016'),
+(238, 37, 'date_du_projet', 'Septembre 2016'),
 (239, 37, '_date_du_projet', 'field_575fa882c6a8c'),
 (240, 37, 'image_slider', '38'),
 (241, 37, '_image_slider', 'field_575fa809c6a8a'),
@@ -563,7 +563,19 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (313, 50, '_config_errors', 'a:1:{s:23:"mail.additional_headers";i:102;}'),
 (314, 52, 'contact_form', '[contact-form-7 id="50" title="Contacthome"]'),
 (315, 52, '_contact_form', 'field_575ff2225dc3c'),
-(316, 48, 'rule', 'a:5:{s:5:"param";s:4:"page";s:8:"operator";s:2:"==";s:5:"value";s:1:"4";s:8:"order_no";i:0;s:8:"group_no";i:0;}');
+(316, 48, 'rule', 'a:5:{s:5:"param";s:4:"page";s:8:"operator";s:2:"==";s:5:"value";s:1:"4";s:8:"order_no";i:0;s:8:"group_no";i:0;}'),
+(318, 53, 'sous-titre', 'Refonte du site internet de la styliste'),
+(319, 53, '_sous-titre', 'field_575fa7e6ed66a'),
+(320, 53, 'date_du_projet', 'Septembre 2016'),
+(321, 53, '_date_du_projet', 'field_575fa882c6a8c'),
+(322, 53, 'image_zone_projets_home', '41'),
+(323, 53, '_image_zone_projets_home', 'field_575fa843c6a8b'),
+(324, 53, 'image_du_projet_1', '38'),
+(325, 53, '_image_du_projet_1', 'field_575fabe7a0527'),
+(326, 53, 'image_du_projet_2', '39'),
+(327, 53, '_image_du_projet_2', 'field_575fac1ba0528'),
+(328, 53, 'image_du_projet_3', '40'),
+(329, 53, '_image_du_projet_3', 'field_575fac2da0529');
 
 -- --------------------------------------------------------
 
@@ -595,7 +607,7 @@ CREATE TABLE IF NOT EXISTS `wp_posts` (
   `post_type` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'post',
   `post_mime_type` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `comment_count` bigint(20) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB AUTO_INCREMENT=53 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=54 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Contenu de la table `wp_posts`
@@ -637,7 +649,7 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (34, 1, '2016-06-14 09:07:02', '2016-06-14 07:07:02', '', 'bruno-saunier-3', '', 'inherit', 'open', 'closed', '', 'bruno-saunier-3', '', '', '2016-06-14 09:07:02', '2016-06-14 07:07:02', '', 31, 'http://localhost/plaitil/wp-content/uploads/2016/06/bruno-saunier-3.png', 0, 'attachment', 'image/png', 0),
 (35, 1, '2016-06-14 09:07:04', '2016-06-14 07:07:04', '', 'miniature-bruno-saunier', '', 'inherit', 'open', 'closed', '', 'miniature-bruno-saunier', '', '', '2016-06-14 09:07:04', '2016-06-14 07:07:04', '', 31, 'http://localhost/plaitil/wp-content/uploads/2016/06/miniature-bruno-saunier.png', 0, 'attachment', 'image/png', 0),
 (36, 1, '2016-06-14 09:07:40', '2016-06-14 07:07:40', '<p class="p1"><span class="s1">D</span><span class="s2">e la conception à l''intégration en passant par l''installation de la solution CMS Wordpress, le site de l''agence Bruno Saunier Architecture est une réalisation 100% “Plait-il?”. Inspiré par les notions de "verre structurel" et de "simplicité" chères au cabinet, il se structure en un patchwork visuel et lumineux des divers projets conçus par Jérôme Bruno et Eric Saunier depuis une vingtaine d’années.</span></p>', 'Bruno Saunier', '', 'inherit', 'closed', 'closed', '', '31-revision-v1', '', '', '2016-06-14 09:07:40', '2016-06-14 07:07:40', '', 31, 'http://localhost/plaitil/31-revision-v1/', 0, 'revision', '', 0),
-(37, 1, '2016-06-14 09:15:32', '2016-06-14 07:15:32', '<p class="p1"><span class="s1">P</span><span class="s2">rojet multi-facettes, “Plait-il?” a imaginé pour annefontaine.com une grande diversité de designs : incitation à la découverte pour la rubrique Anne Fontaine, efficacité et flexibilité pour la consultation des produits, lisibilité pour la partie Carnets… Tous les contenus sont présentés dans un style chic, épuré, élégant qui laisse une grande place aux visuels de mode à la façon d’un magazine.</span></p>\r\n<p class="p1"><span class="s2">Pour ce projet de refonte, “Plait-il?” réalise la conception, la direction artistique ainsi que l’intégration et le développement d’un backoffice modulable.</span></p>', 'Anne Fontaine', '', 'publish', 'open', 'open', '', 'anne-fontaine', '', '', '2016-06-14 09:15:32', '2016-06-14 07:15:32', '', 0, 'http://localhost/plaitil/?p=37', 0, 'post', '', 0),
+(37, 1, '2016-06-14 09:15:32', '2016-06-14 07:15:32', '<p class="p1"><span class="s1">P</span><span class="s2">rojet multi-facettes, “Plait-il?” a imaginé pour annefontaine.com une grande diversité de designs : incitation à la découverte pour la rubrique Anne Fontaine, efficacité et flexibilité pour la consultation des produits, lisibilité pour la partie Carnets… Tous les contenus sont présentés dans un style chic, épuré, élégant qui laisse une grande place aux visuels de mode à la façon d’un magazine.</span></p>\r\n<p class="p1"><span class="s2">Pour ce projet de refonte, “Plait-il?” réalise la conception, la direction artistique ainsi que l’intégration et le développement d’un backoffice modulable.</span></p>', 'Anne Fontaine', '', 'publish', 'open', 'open', '', 'anne-fontaine', '', '', '2016-06-15 09:03:23', '2016-06-15 07:03:23', '', 0, 'http://localhost/plaitil/?p=37', 0, 'post', '', 0),
 (38, 1, '2016-06-14 09:14:57', '2016-06-14 07:14:57', '', 'anne-fontaine-1', '', 'inherit', 'open', 'closed', '', 'anne-fontaine-1', '', '', '2016-06-14 09:14:57', '2016-06-14 07:14:57', '', 37, 'http://localhost/plaitil/wp-content/uploads/2016/06/anne-fontaine-1.png', 0, 'attachment', 'image/png', 0),
 (39, 1, '2016-06-14 09:15:00', '2016-06-14 07:15:00', '', 'anne-fontaine-2', '', 'inherit', 'open', 'closed', '', 'anne-fontaine-2', '', '', '2016-06-14 09:15:00', '2016-06-14 07:15:00', '', 37, 'http://localhost/plaitil/wp-content/uploads/2016/06/anne-fontaine-2.png', 0, 'attachment', 'image/png', 0),
 (40, 1, '2016-06-14 09:15:02', '2016-06-14 07:15:02', '', 'anne-fontaine-3', '', 'inherit', 'open', 'closed', '', 'anne-fontaine-3', '', '', '2016-06-14 09:15:02', '2016-06-14 07:15:02', '', 37, 'http://localhost/plaitil/wp-content/uploads/2016/06/anne-fontaine-3.png', 0, 'attachment', 'image/png', 0),
@@ -652,7 +664,8 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (49, 1, '2016-06-14 14:03:05', '2016-06-14 12:03:05', '<p>Your Name (required)<br />\n    [text* your-name] </p>\n\n<p>Your Email (required)<br />\n    [email* your-email] </p>\n\n<p>Subject<br />\n    [text your-subject] </p>\n\n<p>Your Message<br />\n    [textarea your-message] </p>\n\n<p>[submit "Send"]</p>\nPlait-il? "[your-subject]"\n[your-name] <pierreglardoncontact@gmail.com>\nFrom: [your-name] <[your-email]>\nSubject: [your-subject]\n\nMessage Body:\n[your-message]\n\n--\nThis e-mail was sent from a contact form on Plait-il? (http://localhost/plaitil)\npierreglardoncontact@gmail.com\nReply-To: [your-email]\n\n0\n0\n\nPlait-il? "[your-subject]"\nPlait-il? <pierreglardoncontact@gmail.com>\nMessage Body:\n[your-message]\n\n--\nThis e-mail was sent from a contact form on Plait-il? (http://localhost/plaitil)\n[your-email]\nReply-To: pierreglardoncontact@gmail.com\n\n0\n0\nThank you for your message. It has been sent.\nThere was an error trying to send your message. Please try again later.\nOne or more fields have an error. Please check and try again.\nThere was an error trying to send your message. Please try again later.\nYou must accept the terms and conditions before sending your message.\nThe field is required.\nThe field is too long.\nThe field is too short.', 'Contact form 1', '', 'publish', 'closed', 'closed', '', 'contact-form-1', '', '', '2016-06-14 14:03:05', '2016-06-14 12:03:05', '', 0, 'http://localhost/plaitil/?post_type=wpcf7_contact_form&p=49', 0, 'wpcf7_contact_form', '', 0),
 (50, 1, '2016-06-14 14:15:35', '2016-06-14 12:15:35', '<div class="row">\r\n  <div class="columns large-6">[text* nom placeholder "Votre incroyable nom"]</div>\r\n  <div class="columns large-6">[email* email placeholder "Votre super email"]</div>\r\n</div>\r\n<div class="row">\r\n  <div class="columns large-12">\r\n    [textarea* textarea-914 placeholder "Votre doux message"]</div>\r\n  </div>\r\n</div>\r\n<div class="row">\r\n  <div class="columns large-12">\r\n    [submit "Envoyer"]\r\n  </div>\r\n</div>\nPlait-il? "[your-subject]"\n[your-name] <pierreglardoncontact@gmail.com>\nFrom: [your-name] <[your-email]>\r\nSubject: [your-subject]\r\n\r\nMessage Body:\r\n[your-message]\r\n\r\n--\r\nThis e-mail was sent from a contact form on Plait-il? (http://localhost/plaitil)\npierreglardoncontact@gmail.com\nReply-To: [your-email]\n\n\n\n\nPlait-il? "[your-subject]"\nPlait-il? <pierreglardoncontact@gmail.com>\nMessage Body:\r\n[your-message]\r\n\r\n--\r\nThis e-mail was sent from a contact form on Plait-il? (http://localhost/plaitil)\n[your-email]\nReply-To: pierreglardoncontact@gmail.com\n\n\n\nThank you for your message. It has been sent.\nThere was an error trying to send your message. Please try again later.\nOne or more fields have an error. Please check and try again.\nThere was an error trying to send your message. Please try again later.\nYou must accept the terms and conditions before sending your message.\nThe field is required.\nThe field is too long.\nThe field is too short.\nThe date format is incorrect.\nThe date is before the earliest one allowed.\nThe date is after the latest one allowed.\nThere was an unknown error uploading the file.\nYou are not allowed to upload files of this type.\nThe file is too big.\nThere was an error uploading the file.\nThe number format is invalid.\nThe number is smaller than the minimum allowed.\nThe number is larger than the maximum allowed.\nThe answer to the quiz is incorrect.\nYour entered code is incorrect.\nThe e-mail address entered is invalid.\nThe URL is invalid.\nThe telephone number is invalid.', 'Contacthome', '', 'publish', 'closed', 'closed', '', 'contact-home', '', '', '2016-06-14 14:16:21', '2016-06-14 12:16:21', '', 0, 'http://localhost/plaitil/?post_type=wpcf7_contact_form&#038;p=50', 0, 'wpcf7_contact_form', '', 0),
 (51, 1, '2016-06-14 14:15:42', '2016-06-14 12:15:42', 'Faites confiance à une agence expérimentée, pour qui le web n’a plus de secret. Grâce à notre équipe de professionnels, nous pouvons prendre en charge l’intégralité de votre projet. L’agence “plait-il?” réunit un collectif de professionnels et vous accompagne sur toute la chaîne de communication, de votre identité visuelle à votre stratégie digitale. Chaque projet, chaque client est unique. Pour chacun, nous mettons en œuvre une méthodologie structurée et sur-mesure. Elle garantit un pilotage efficace et le respect de nos engagements. Chez “Plait-il?”, nous cultivons les paradoxes : sérieux et bonne humeur, rigueur et créativité, autonomie et esprit d’équipe sont les valeurs que nous partageons, en exerçant tous les jours nos métiers si différents. Vous vous reconnaissez ? Il est une promesse que nous pouvons vous faire : vous n’allez pas vous ennuyer !', 'Accueil', '', 'inherit', 'closed', 'closed', '', '4-revision-v1', '', '', '2016-06-14 14:15:42', '2016-06-14 12:15:42', '', 4, 'http://localhost/plaitil/4-revision-v1/', 0, 'revision', '', 0),
-(52, 1, '2016-06-14 14:16:31', '2016-06-14 12:16:31', 'Faites confiance à une agence expérimentée, pour qui le web n’a plus de secret. Grâce à notre équipe de professionnels, nous pouvons prendre en charge l’intégralité de votre projet. L’agence “plait-il?” réunit un collectif de professionnels et vous accompagne sur toute la chaîne de communication, de votre identité visuelle à votre stratégie digitale. Chaque projet, chaque client est unique. Pour chacun, nous mettons en œuvre une méthodologie structurée et sur-mesure. Elle garantit un pilotage efficace et le respect de nos engagements. Chez “Plait-il?”, nous cultivons les paradoxes : sérieux et bonne humeur, rigueur et créativité, autonomie et esprit d’équipe sont les valeurs que nous partageons, en exerçant tous les jours nos métiers si différents. Vous vous reconnaissez ? Il est une promesse que nous pouvons vous faire : vous n’allez pas vous ennuyer !', 'Accueil', '', 'inherit', 'closed', 'closed', '', '4-revision-v1', '', '', '2016-06-14 14:16:31', '2016-06-14 12:16:31', '', 4, 'http://localhost/plaitil/4-revision-v1/', 0, 'revision', '', 0);
+(52, 1, '2016-06-14 14:16:31', '2016-06-14 12:16:31', 'Faites confiance à une agence expérimentée, pour qui le web n’a plus de secret. Grâce à notre équipe de professionnels, nous pouvons prendre en charge l’intégralité de votre projet. L’agence “plait-il?” réunit un collectif de professionnels et vous accompagne sur toute la chaîne de communication, de votre identité visuelle à votre stratégie digitale. Chaque projet, chaque client est unique. Pour chacun, nous mettons en œuvre une méthodologie structurée et sur-mesure. Elle garantit un pilotage efficace et le respect de nos engagements. Chez “Plait-il?”, nous cultivons les paradoxes : sérieux et bonne humeur, rigueur et créativité, autonomie et esprit d’équipe sont les valeurs que nous partageons, en exerçant tous les jours nos métiers si différents. Vous vous reconnaissez ? Il est une promesse que nous pouvons vous faire : vous n’allez pas vous ennuyer !', 'Accueil', '', 'inherit', 'closed', 'closed', '', '4-revision-v1', '', '', '2016-06-14 14:16:31', '2016-06-14 12:16:31', '', 4, 'http://localhost/plaitil/4-revision-v1/', 0, 'revision', '', 0),
+(53, 1, '2016-06-15 09:02:26', '2016-06-15 07:02:26', '<p class="p1"><span class="s1">P</span><span class="s2">rojet multi-facettes, “Plait-il?” a imaginé pour annefontaine.com une grande diversité de designs : incitation à la découverte pour la rubrique Anne Fontaine, efficacité et flexibilité pour la consultation des produits, lisibilité pour la partie Carnets… Tous les contenus sont présentés dans un style chic, épuré, élégant qui laisse une grande place aux visuels de mode à la façon d’un magazine.</span></p>\r\n<p class="p1"><span class="s2">Pour ce projet de refonte, “Plait-il?” réalise la conception, la direction artistique ainsi que l’intégration et le développement d’un backoffice modulable.</span></p>', 'Anne Fontaine', '', 'inherit', 'closed', 'closed', '', '37-revision-v1', '', '', '2016-06-15 09:02:26', '2016-06-15 07:02:26', '', 37, 'http://localhost/plaitil/37-revision-v1/', 0, 'revision', '', 0);
 
 -- --------------------------------------------------------
 
@@ -741,7 +754,10 @@ INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`, `term_orde
 (31, 7, 0),
 (37, 2, 0),
 (37, 3, 0),
-(37, 9, 0),
+(37, 4, 0),
+(37, 5, 0),
+(37, 6, 0),
+(37, 7, 0),
 (43, 10, 0),
 (44, 10, 0),
 (45, 10, 0),
@@ -770,12 +786,12 @@ INSERT INTO `wp_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, `desc
 (1, 1, 'category', '', 0, 1),
 (2, 2, 'category', '', 0, 5),
 (3, 3, 'post_tag', '', 0, 5),
-(4, 4, 'post_tag', '', 0, 4),
-(5, 5, 'post_tag', '', 0, 4),
-(6, 6, 'post_tag', '', 0, 4),
-(7, 7, 'post_tag', '', 0, 3),
+(4, 4, 'post_tag', '', 0, 5),
+(5, 5, 'post_tag', '', 0, 5),
+(6, 6, 'post_tag', '', 0, 5),
+(7, 7, 'post_tag', '', 0, 4),
 (8, 8, 'post_tag', '', 0, 1),
-(9, 9, 'post_tag', '', 0, 1),
+(9, 9, 'post_tag', '', 0, 0),
 (10, 10, 'nav_menu', '', 0, 4);
 
 -- --------------------------------------------------------
@@ -969,17 +985,17 @@ ALTER TABLE `wp_links`
 -- AUTO_INCREMENT pour la table `wp_options`
 --
 ALTER TABLE `wp_options`
-  MODIFY `option_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=195;
+  MODIFY `option_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=204;
 --
 -- AUTO_INCREMENT pour la table `wp_postmeta`
 --
 ALTER TABLE `wp_postmeta`
-  MODIFY `meta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=317;
+  MODIFY `meta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=331;
 --
 -- AUTO_INCREMENT pour la table `wp_posts`
 --
 ALTER TABLE `wp_posts`
-  MODIFY `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=53;
+  MODIFY `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=54;
 --
 -- AUTO_INCREMENT pour la table `wp_termmeta`
 --
