@@ -8,37 +8,52 @@
 
 get_header(); ?>
 
-<div id="single-post" role="main">
+<div id="single-post" class="content" role="main">
 
-<?php do_action( 'foundationpress_before_content' ); ?>
+
 <?php while ( have_posts() ) : the_post(); ?>
-	<article <?php post_class('main-content') ?> id="post-<?php the_ID(); ?>">
-		<header>
-			<h1 class="entry-title"><?php the_title(); ?></h1>
-			<?php foundationpress_entry_meta(); ?>
-		</header>
-		<?php do_action( 'foundationpress_post_before_entry_content' ); ?>
-		<div class="entry-content">
 
-		<?php
-			if ( has_post_thumbnail() ) :
-				the_post_thumbnail();
-			endif;
-		?>
-
-		<?php the_content(); ?>
+	<header class-"row">
+		<div class="columns small-12">
+			<h2>Agence “Plait-il?”</h2>
+	        <h3>Exploratrice en web  depuis 2005</h3>
+			<hr />
+			<div>
+				<?php the_content() ?>
+			</div>
+			<hr />
 		</div>
-		<footer>
-			<?php wp_link_pages( array('before' => '<nav id="page-nav"><p>' . __( 'Pages:', 'foundationpress' ), 'after' => '</p></nav>' ) ); ?>
-			<p><?php the_tags(); ?></p>
-		</footer>
-		<?php do_action( 'foundationpress_post_before_comments' ); ?>
-		<?php comments_template(); ?>
-		<?php do_action( 'foundationpress_post_after_comments' ); ?>
-	</article>
+	</header>
+	<section class="row">
+		<aside class="columns large-3">
+			<?php the_tags( '<ul class="tags"><li>', '</li><li>', '</li></ul>' ); ?>
+			<h4><?php the_field('date_du_projet') ?></h4>
+			<a href="#!site" class="p-button"><span>Voir le site</span></a>
+			<div class="network">
+				<a href="#!facebook">
+					<i class="fa fa-facebook" aria-hidden="true"></i>
+				</a>
+				<a href="#!">
+					<i class="fa fa-twitter" aria-hidden="true"></i>
+				</a>
+				<a href="#!">
+					<i class="fa fa-github-alt" aria-hidden="true"></i>
+				</a>
+				<a href="#!">
+					<i class="fa fa-pinterest-p" aria-hidden="true"></i>
+				</a>
+			</div>
+		</aside>
+		<div class="columns large-9 text-center">
+			<div class="projet-img"><img src="<?php the_field('image_du_projet_1') ?>" alt="<?php the_title() ?>" /></div>
+			<div class="projet-img"><img src="<?php the_field('image_du_projet_2') ?>" alt="<?php the_title() ?>" /></div>
+			<div class="projet-img"><img src="<?php the_field('image_du_projet_3') ?>" alt="<?php the_title() ?>" /></div>
+
+		</div>
+	</section>
+
+
 <?php endwhile;?>
 
-<?php do_action( 'foundationpress_after_content' ); ?>
-<?php get_sidebar(); ?>
 </div>
 <?php get_footer();

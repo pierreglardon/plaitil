@@ -32,48 +32,6 @@
     }
     .network {
         margin-bottom:60px;
-        a {
-            height:32px;
-            line-height:32px;
-            width:32px;
-            margin:0 30px;
-            color:$p-red;
-            display:inline-block;
-            position:relative;
-            transition: all cubic-bezier(0.29, -0.77, 0.51, 1.73) 0.3s;
-            @include breakpoint(large down) {
-                margin:0 10px;
-            }
-            i {
-                font-size: 24px;
-                display:inline-block;
-                vertical-align: middle;
-                position:relative;
-                z-index: 1;
-            }
-            &::before {
-                height:0;
-                width:0;
-                border-radius: 50%;
-                background:$p-red;
-                position:absolute;
-                z-index: 0;
-                top:0;
-                right:0;
-                left:0;
-                bottom:0;
-                margin:auto;
-                content:"";
-                transition: all cubic-bezier(0.29, -0.77, 0.51, 1.73) 0.3s;
-            }
-            &:hover {
-                color:#ffffff;
-                &::before {
-                    height:100%;
-                    width:100%;
-                }
-            }
-        }
     }
     #map {
         height:500px;
