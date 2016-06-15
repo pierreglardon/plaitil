@@ -480,12 +480,19 @@ section.container {
 
 #single-post {
     padding: 100px 0;
+    @include breakpoint(large down) {
+        padding-bottom: 30px;
+    }
     hr {
         width:calc(100% / 12 * 2);
         margin:70px auto;
         height:2px;
         background:$p-red;
         border:0;
+        @include breakpoint(large down) {
+            margin:35px auto;
+            width:50%;
+        }
     }
     h3 {
         + hr {
@@ -493,14 +500,21 @@ section.container {
         }
     }
     aside {
+        @include breakpoint(large down) {
+            text-align:center;
+        }
         ul.tags {
             list-style:none;
             color:#fff;
             font-size:24px;
             margin:0 0 40px;
             li {
+                @include breakpoint(large down) {
+                    display:inline-block;
+                    font-size:18px;
+                }
                 &::after {
-                    content:",";
+                    content:", ";
                     display:inline-block;
                 }
                 &:last-of-type {
@@ -519,12 +533,23 @@ section.container {
             font-size:24px;
             font-family: $fontplaitil;
             margin:0 0 40px;
+            @include breakpoint(large down) {
+                font-size:18px;
+                margin:0 0 40px;
+            }
         }
         .p-button {
             margin:0;
+            @include breakpoint(large down) {
+                padding:10px 22px;
+                font-size:18px;
+            }
         }
         .network {
             margin-top:40px;
+            @include breakpoint(large down) {
+                margin-bottom:40px;
+            }
             a {
                 margin: 0 10px;
                 text-align:center;
@@ -533,22 +558,48 @@ section.container {
     }
     section {
         .projet-img {
-            padding-bottom:78px;
-            margin: 0 auto 100px;
+            margin: 0 auto 218px;
             position:relative;
+            @include breakpoint(large down) {
+                margin-bottom: 100px;
+            }
+            @include breakpoint(small down) {
+                margin-bottom: 50px;
+            }
             &::before {
                 content:"";
                 width:100%;
-                height:78px;
+                height:13%;
                 background: linear-gradient(135deg, #adaeb2 0%,#dedfe1 100%);
                 position:absolute;
-                bottom:0;
+                bottom:-13%;
                 left:0;
                 border-radius:0 0 25px 25px;
+                @include breakpoint(large down) {
+                    border-radius:0 0 10px 10px;
+                }
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: calc(-118px - 13%);
+                margin:auto;
+                height:118px;
+                width:262px;
+                background:url('../plaitil/mockup-imac-foot.png') no-repeat;
+                @include breakpoint(large down) {
+                    display:none;
+                }
             }
             img {
                 border: 34px solid #000000;
                 border-radius: 25px 25px 0 0;
+                @include breakpoint(large down) {
+                    border: 20px solid #000000;
+                    border-radius: 10px 10px 0 0;
+                }
             }
         }
     }
