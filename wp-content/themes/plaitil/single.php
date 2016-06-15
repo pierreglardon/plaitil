@@ -15,8 +15,8 @@ get_header(); ?>
 
 	<header class-"row">
 		<div class="columns small-12">
-			<h2>Agence “Plait-il?”</h2>
-	        <h3>Exploratrice en web  depuis 2005</h3>
+			<h2><?php the_title() ?></h2>
+	        <h3><?php the_field('sous-titre') ?></h3>
 			<hr />
 			<div>
 				<?php the_content() ?>
